@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Longbow.Tasks.Extensions.EntityFrameworkCore\Longbow.Tasks.Extensions.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
 </Project>

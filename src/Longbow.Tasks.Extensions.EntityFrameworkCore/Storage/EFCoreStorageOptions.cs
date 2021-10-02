@@ -1,0 +1,33 @@
+﻿// Copyright (c) Argo Zhang (argo@163.com). All rights reserved.
+// Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
+// Website: https://www.blazor.zone or https://argozhang.github.io/
+
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
+
+namespace Longbow.Tasks.EFCore.Storage
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public class EFCoreStorageOptions
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="TOptions"></typeparam>
+    internal class EFCoreStorageOptionsConfigureOption<TOptions> : ConfigureFromConfigurationOptions<TOptions>
+        where TOptions : class
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
+        public EFCoreStorageOptionsConfigureOption(IConfiguration configuration)
+            : base(configuration.GetSection("EFCoreStorageOptions"))
+        {
+        }
+    }
+}

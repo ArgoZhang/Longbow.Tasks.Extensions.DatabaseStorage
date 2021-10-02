@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Longbow.Tasks.Extensions.EntityFrameworkCore</name>
+    </assembly>
+    <members>
+        <member name="T:Longbow.Tasks.EFCore.Scheduler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Longbow.Tasks.EFCore.Scheduler.SchedulerName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Longbow.Tasks.EFCore.Scheduler.ITrigger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Longbow.Tasks.EFCore.SchedulerDBContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.SchedulerDBContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Longbow.Tasks.EFCore.SchedulerDBContext})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:Longbow.Tasks.EFCore.SchedulerDBContext.Schedulers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.SchedulerDBContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Longbow.Tasks.EFCore.TypeEntityConfigure">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.TypeEntityConfigure.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Longbow.Tasks.EFCore.Scheduler})">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:Longbow.Tasks.EFCore.Storage.EFCoreStorage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Longbow.Tasks.EFCore.Storage.EFCoreStorage.Exception">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.Storage.EFCoreStorage.#ctor(Longbow.Tasks.EFCore.SchedulerDBContext)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.Storage.EFCoreStorage.LoadAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.Storage.EFCoreStorage.CreateTaskByScheduleName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="scheduleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.Storage.EFCoreStorage.Save(System.String,Longbow.Tasks.ITrigger)">
+            <summary>
+            
+            </summary>
+            <param name="schedulerName"></param>
+            <param name="trigger"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.Storage.EFCoreStorage.Remove(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="schedulerNames"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Longbow.Tasks.EFCore.Storage.EFCoreStorageOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Longbow.Tasks.EFCore.Storage.EFCoreStorageOptionsConfigureOption`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="TOptions"></typeparam>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.Storage.EFCoreStorageOptionsConfigureOption`1.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:Longbow.Tasks.EFCore.EFCoreStorageExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Longbow.Tasks.EFCore.EFCoreStorageExtension.AddDBStorage(Longbow.Tasks.ITaskStorageBuilder,System.Action{Longbow.Tasks.EFCore.Storage.EFCoreStorageOptions},System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder})">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <param name="options"></param>
+            <param name="dboption"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
